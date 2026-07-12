@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if ! ykman list 2>/dev/null | grep -qi yubikey; then
+#   echo " Insert your YubiKey"
+  exit 0
+fi
+
+sec=$(date +%s)
+
+# if (( sec % 4 < 2 )); then
+echo "󰌋 Enter YubiKey PIN and touch when it blinks"
+# else
+#   echo " Press Enter, then touch when it blinks"
+# fi

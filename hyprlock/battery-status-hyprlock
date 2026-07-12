@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# omarchy:summary=Print battery icon and percentage for the hyprlock screen, or nothing if no battery is present.
+
+mode=${1:-normal}
+
+bat_path=$(upower -e 2>/dev/null | grep BAT | head -1)
+[[ -z $bat_path ]] && exit 0
+
+bat_info=$(upower -i "$bat_path" 2>/dev/null)
+percentage=$(echo "$bat_info" | awk '/percentage/ { print int($2); exit }')
+state=$(echo "$bat_info" | awk '/state/ { print $2; exit }')
+
+[[ -z $percentage ]] && exit 0
+
+if [[ $state == "charging" || $state == "fully-charged" ]]; then
+  icon="󰂄"
+elif (( percentage > 90 )); then icon="󰂂"
+elif (( percentage > 80 )); then icon="󰂁"
+elif (( percentage > 70 )); then icon="󰂀"
+elif (( percentage > 60 )); then icon="󰁿"
+elif (( percentage > 50 )); then icon="󰁾"
+elif (( percentage > 40 )); then icon="󰁽"
+elif (( percentage > 30 )); then icon="󰁼"
+elif (( percentage > 20 )); then icon="󰁻"
+else icon="󰁺"
+fi
+
+case "$mode" in
+  charging)
+    [[ $state == "charging" || $state == "fully-charged" ]] || exit 0
+    ;;
+  high)
+    [[ $state != "charging" && $state != "fully-charged" && $percentage -gt 80 ]] || exit 0
+    ;;
+  normal)
+    [[ $state != "charging" && $state != "fully-charged" && $percentage -le 80 && $percentage -gt 40 ]] || exit 0
+    ;;
+  low)
+    [[ $state != "charging" && $state != "fully-charged" && $percentage -le 40 && $percentage -gt 20 ]] || exit 0
+    ;;
+  critical)
+    [[ $state != "charging" && $state != "fully-charged" && $percentage -le 20 ]] || exit 0
+    ;;
+esac
+
+echo "$icon $percentage%"
