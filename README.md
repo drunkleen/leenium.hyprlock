@@ -1,8 +1,6 @@
 <div align="center">
 
-# Leenium Hyprlock
-
-<img src="./assets/icon.png" width="120" alt="Leenium Hyprlock logo" />
+<img src="https://raw.githubusercontent.com/drunkleen/leenium.webpage/refs/heads/master/assets/LEENIUM.png" width="250" alt="Leenium logo" />
 
 **A Hyprlock lock screen theme built from the shared Leenium palette.**
 
@@ -72,3 +70,5 @@ Visit [github.com/drunkleen](https://github.com/drunkleen) or [leenium.drunkleen
 ## License
 
 MIT © [Leenium](LICENSE)
+
+<img src="https://raw.githubusercontent.com/drunkleen/leenium.webpage/refs/heads/master/assets/footer.png" width="100%" alt="Leenium footer" />
