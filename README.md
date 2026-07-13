@@ -14,26 +14,6 @@ Hosted under `github.com/drunkleen/leenium.hyprlock`.
 
 ---
 
-## Color Palette
-
-| Role | Hex | Swatch |
-|---|---|---|
-| Background | `#0b1113` | ![](https://placehold.co/16x16/0b1113/0b1113.png) |
-| Panel | `#11191c` | ![](https://placehold.co/16x16/11191c/11191c.png) |
-| Floating | `#182326` | ![](https://placehold.co/16x16/182326/182326.png) |
-| Border | `#223033` | ![](https://placehold.co/16x16/223033/223033.png) |
-| Active Border | `#304144` | ![](https://placehold.co/16x16/304144/304144.png) |
-| Foreground | `#d8e3e0` | ![](https://placehold.co/16x16/d8e3e0/d8e3e0.png) |
-| Soft Text | `#a4b4b2` | ![](https://placehold.co/16x16/a4b4b2/a4b4b2.png) |
-| Cyan | `#59d6c5` | ![](https://placehold.co/16x16/59d6c5/59d6c5.png) |
-| Teal | `#33b8a8` | ![](https://placehold.co/16x16/33b8a8/33b8a8.png) |
-| Yellow | `#d9c76b` | ![](https://placehold.co/16x16/d9c76b/d9c76b.png) |
-| Blue | `#5e9bff` | ![](https://placehold.co/16x16/5e9bff/5e9bff.png) |
-| Emerald | `#4dba7a` | ![](https://placehold.co/16x16/4dba7a/4dba7a.png) |
-| Red | `#e16f73` | ![](https://placehold.co/16x16/e16f73/e16f73.png) |
-
----
-
 ## Features
 
 - **Shared palette** - matches the same Leenium colors used across the other repos
@@ -77,8 +57,8 @@ cp -r hyprlock/* ~/.config/hypr/hyprlock/
 Leenium is a unified dark desktop environment built around the same color palette. Alongside this Waybar theme, the project ships matching configs for:
 
 - [**Firefox**](github.com/drunkleen/leenium.firefox) - browser theme extension
-- [**Hyprlock**](github.com/drunkleen/leenium.hyprlock) - browser theme extension
-- [**Limine**](github.com/drunkleen/leenium.limine) - browser theme extension
+- [**Ghidra**](github.com/drunkleen/leenium.ghidra) - reverse engineering framework theme
+- [**Limine**](github.com/drunkleen/leenium.limine) - BootLoader
 - [**Neovim**](github.com/drunkleen/leenium.nvim) - syntax highlights and UI elements
 - [**Omarchy**](github.com/drunkleen/leenium.omarchy) - desktop theme bundle
 - [**OpenCode**](github.com/drunkleen/leenium.opencode) - terminal-first theme
